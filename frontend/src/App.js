@@ -6,6 +6,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import axios from "axios";
 import Login from "./components/Login";
 import Mode from "./components/Mode";
 import Signup from "./components/Signup";
@@ -23,11 +24,31 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const storedUserId = localStorage.getItem("userId");
-    setIsLoggedIn(!!token);
-    setUserId(storedUserId);
-    setIsLoading(false);
+    const verifyToken = async () => {
+      const token = localStorage.getItem("token");
+      if (token) {
+        try {
+          const response = await axios.get("http://localhost:5001/api/auth/verifyToken", {
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          });
+          if (response.status === 200) {
+            setIsLoggedIn(true);
+            setUserId(localStorage.getItem("userId"));
+          } else {
+            handleLogout();
+          }
+        } catch (error) {
+          handleLogout();
+        }
+      } else {
+        handleLogout();
+      }
+      setIsLoading(false);
+    };
+
+    verifyToken();
   }, []);
 
   const handleLogin = (id) => {
