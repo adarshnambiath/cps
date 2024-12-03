@@ -1,0 +1,17 @@
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .back-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .back-button img {
+    width: 40px;
+    height: 40px;
+  }

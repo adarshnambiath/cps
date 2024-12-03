@@ -1,0 +1,68 @@
+.clicker-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e;
+  font-family: Arial, sans-serif;
+}
+
+.clicker-button {
+  width: 1200px;
+  height: 500px;
+  background-color: #343434;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.clicker-button:disabled {
+  background-color: #ccc;
+  color:#1e1e1e;
+  cursor: not-allowed;
+  font-size: xx-large;
+  transition: 0.2s ease ;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.button-wrapper {
+  position: relative;
+}
+
+p {
+  font-size: 1.4rem;
+  margin: 30px 0;
+}
+
+.clicker-button:active {
+  transform: scale(0.99);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  color: white;
+  background-color: #292929;
+  cursor: pointer;
+}
+
+.try-again-button {
+  margin: 20px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: background-color 0.2s ease;
+  width: 300px;
+  height: auto;
+}
+

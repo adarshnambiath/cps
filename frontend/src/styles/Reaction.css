@@ -1,0 +1,59 @@
+.reaction-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e1e;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #858585;
+  font-weight: 300;
+  font-size: 2.5em;
+  margin: 50px 0 60px;
+}
+
+.reaction-gallery {
+  width: 80%;
+  max-width: 1000px;
+  height: 50vh;
+  background-color: #7391f3;
+  color: #a7bbff; 
+  border-radius: 20px;
+  font-size: 2.5em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.reaction-gallery:hover {
+  opacity: 0.9;
+}
+
+.btn-reaction-start {
+  width: 300px;
+  height: max-content;
+
+  font-size: 1.5rem;
+
+  border-radius: 10px;
+
+  padding: 20px;
+  margin-top: 0px !important;
+  margin-bottom: 30px;
+}
+
+.reaction-result {
+  width: 500px;
+
+  margin-top: 50px;
+
+  font-size: 1.4rem;
+
+  background-color: #1e1e1e;
+  text-align: center;
+}
